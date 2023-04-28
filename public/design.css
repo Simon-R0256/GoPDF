@@ -1,0 +1,711 @@
+/* Hier stehen alle CSS-Anpassungen für die Webapplikation */
+
+/* border-box modell für alle Elemente */
+* {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.backgroundPic {
+    background-image: url("Bilder_WebApp/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+#logo {
+    background-color: #13306a;
+}
+
+#navigation {
+    background-color: #2579b5;
+}
+
+#footer {
+    background-color: #13306a;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    height: 45px;
+}
+
+#footerResponsive {
+    height: 60px;
+    visibility: hidden;
+}
+
+/* Error Box */
+
+.messageBox {
+    display: none;
+    position:absolute;
+    text-align: center;
+    width:550px;
+    z-index: 9999;
+    font-size: 22px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:7%;
+}
+
+/* Admin-Box Contents */
+
+.contentHead {
+    width: 94%;
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+    background-color: #2579b5 !important;
+    color: white;
+    font-size: 150%;
+    font-family: "Helvetica";
+    font-weight: bold;
+}
+
+.contentBorder {
+    border: #2579b5 2px solid;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.boxSize {
+    max-width: 475px;
+}
+
+/* Navbar */
+.transition::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.4s;
+}
+
+.transition:hover::after {
+    width: 100%;
+}
+
+.activeLink::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+}
+
+.nav-link {
+    color: white;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: #c8ced3;
+}
+
+.nav-link:focus {
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #13306a;
+    border: #000000 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    height: 53px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #2579b5;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.dropdown-toggle:focus {
+    color: #c8ced3;
+}
+
+/*Logout Content*/
+
+.sessionInfo {
+    font-size: 26px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.724);
+    display: inline;
+}
+
+.startBox {
+    height: 42px;
+    border: #000000 2px solid;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.endBox {
+    height: 42px;
+    border: #000000 2px solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 0px;
+}
+
+.logoutButton {
+    height: 39px;
+    border: #000000 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 50%;
+}
+
+.logoutButton:hover {
+    background-color: #d73a3a;
+    border: #000000 2px solid;
+}
+
+.profileLink {
+    text-decoration: none;
+}
+
+.profileLink:hover .sessionInfo {
+    background-color: rgb(164, 164, 164);
+}
+
+/* Content Buttons */
+
+.btnstyle {
+    width: 150px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #2579b5;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btnstyle:hover {
+    width: 156px;
+    height: 56px;
+    color: #ffffff;
+    margin: -3px;
+    font-weight: bold;
+}
+
+.btnstyle:focus {
+    background-color: #2579b5;
+    color: white;
+}
+
+.btnstyle-red:hover{
+    background-color: #d73a3a !important;
+    color: #ffffff !important;
+}
+
+.btnstyle-green:hover{
+    background-color: rgb(51, 149, 51) !important;
+    color: #ffffff !important;
+}
+
+/* Tabelle */
+
+.dataTables_wrapper{
+    width: 100%;
+    background-color:#2579b5;
+    border: #2579b5 2px solid;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: #b0cee4 1px solid;
+}
+
+.dataTables_length{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.dataTables_length label{
+    background-color: #ffffffa3;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px black solid;
+}
+
+.dataTables_length label select{
+    background: rgba(255, 255, 255, 0.832) !important;
+    border-radius: 10px !important;
+}
+
+.dataTables_filter{
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dataTables_filter label{
+    background-color: #ffffffa3;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px black solid;
+}
+
+.dataTables_filter label input{
+    background-color: white !important;
+    height: 34px !important;
+    padding: 0px !important;
+    border-radius: 10px !important;
+    padding-left: 5px !important;
+}
+
+.dataTables_filter label input:focus{
+    outline: 0px;
+}
+
+.dataTables_paginate{
+    font-size: 22px !important;
+    color: black !important;
+    font-weight: 600 !important;
+    float: none !important;
+    text-align: center !important;
+    margin-top: 5px;
+}
+
+.paginate_button{
+    height: 35px !important;
+    background-color: #ffffffa3 !important;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+    padding-left:15px !important;
+    padding-right:15px !important;
+    position: relative;
+    bottom: 3px;
+    border-radius: 10px !important;
+    border: 0px !important;
+}
+
+.paginate_button:hover{
+    background: #94a1a7e4 !important; 
+    user-select: none;
+}
+
+.current{
+  background:rgb(68, 195, 136) !important;
+}
+
+.dataTables_scrollBody{
+    background-color: white;
+    overflow-anchor: none;
+}
+
+.dataTables_scrollHead{
+    border-top: #b0cee4 1px solid !important;
+}
+
+.tablestyle{
+    width: 100% !important;
+    color: black;
+}
+
+.tablestyle tr:hover {
+    background-color: #b4b4b482;
+}
+
+.tablestyle th {
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #2579b5;
+    color: white;
+    white-space: nowrap;
+    font-family: "Lucida Sans";
+    user-select: none;
+    border-bottom: 0px !important;
+    text-align: center !important;
+    border-right: 1px #b0cee4 solid;
+}
+
+.tablestyle th:last-of-type{
+    border-right: none;
+}
+
+.tablestyle td {
+    font-size: 22px !important;
+    font-family: "Calibri" !important;
+    white-space: nowrap;
+    border-bottom:#2579b5 1px solid;
+    height: 45px !important;
+    text-align: center;
+}
+
+.tableHead {
+    background-color: #13306a;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Helvetica;
+    font-size:40px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.tableButton {
+    border: 0px;
+    background-color: rgba(23, 57, 250, 0.317);
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.tableButton:hover {
+    border: #13306a 1px solid;
+    margin: -1px;
+}
+
+.hideAction {
+    visibility: hidden;
+}
+
+.showAction:hover .hideAction {
+    visibility: visible;
+}
+
+/*Formulare*/
+.form-check-input:hover {
+    border-color: #000000;
+}
+
+.form-control:hover {
+    border-color: #000000;
+    border-width: 2px;
+    background-color: #b4b4b447;
+    margin: -1px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/*Image behaviour*/
+
+.img-link:hover {
+    background-color: #b4b4b447;
+    border: #000000 1px solid;
+    border-radius: 20px;
+}
+
+/*Date-Input and Labels*/
+
+#keyDate {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*Login Seite */
+.loginRow {
+    position: absolute;
+    top: 30%;
+    height: 53%;
+    width: 100%;
+}
+
+.loginCol {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffffc7;
+    border: #13306a 3px solid;
+    border-radius: 10px;
+}
+
+.loginHelp {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #13306a;
+    font-size: 65px;
+}
+
+.loginHelp:hover {
+    color: #2579b5;
+}
+
+.loginContainer {
+    background-image: url("Bilder_WebApp/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.offset-row {
+    position: relative;
+    bottom: 15%;
+}
+
+.loginHead {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #13306a;
+    color: #ffffff;
+    font-family: Helvetica;
+}
+
+.loginButton {
+    width: 180px;
+    height: 60px;
+    color: #ffffff;
+    background-color: #13306a;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.loginButton:hover {
+    width: 186px;
+    height: 66px;
+    margin: -3px;
+    font-weight: bold;
+    outline: #000000ba 2px solid;
+    color: #ffffff;
+    background-color: #2579b5;
+}
+
+.loginButton:focus, .loginButton:active {
+    background-color: #2579b5 !important;
+    color: #ffffff !important;
+}
+
+.loginError {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.passwordReset {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.passwordReset:hover {
+    font-weight:600;
+}
+
+/* Editor Seite */
+
+.editorStyle {
+    background-color: #2579b5;
+    border-radius: 20px;
+}
+
+.editorHead {
+    font-family: Helvetica;
+    text-align: center;
+    color: #ffffff;
+    height: 60px;
+    background-color: #13306a;
+    border-radius: 20px;
+}
+
+.editorNameField {
+    background-color: #13306a;
+    border: 0px;
+    color: white;
+    font-size: 22px;
+    border-radius: 6px;
+    padding: 5px;
+    height: 60px;
+    width: 100%;
+}
+
+.editorNameField::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.editorNameField:focus {
+    outline: 0px;
+}
+
+.nameIcon {
+    background-color: #13306a;
+    color: #ffffff;
+    border: 0px;
+}
+
+.editorButton {
+    background-color: #13306a;
+    height: 60px;
+    width: 158px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.editorButton:hover , .editorButton:focus{
+    background-color: #13306a !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    outline: 1px rgba(255, 255, 255, 0.438) solid;
+}
+
+/* Help Page */
+
+.helpBody {
+    background-image: url("Bilder_WebApp/boardbg.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    width: 85%;
+    height: 70vh;
+    overflow: auto;
+    border: #000000 5px solid;
+    font-family: "Bahnschrift";
+}
+
+.helpHead {
+    max-width: 600px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 400;
+    background-color: #13306a;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.boxHead {
+    color: #000000;
+    text-shadow: #000000;
+    font-size: 32px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    border-bottom: black 2px solid;
+}
+
+.helpBox {
+    background-image: url("Bilder_WebApp/paper.jpg");
+    background-size: contain;
+    position: relative;
+    max-width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.helpText {
+    font-size: 18px;
+}
+
+.boardPin {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.boardIcon {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 40px;
+}
+
+/*Profile Seite*/
+
+.profileHead {
+    background-color: #13306a;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    font-size: 40px;
+}
+
+.profileContent {
+    background-color: #2579b5;
+    color: white;
+}
+
+.profileFooter {
+    background-color: #13306a;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profileTable {
+    background-color: #c8ced3;
+    color: #000000;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: Arial;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+
+.profileTable td {
+    border-bottom: 2px solid #000000;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.profileButton{
+    background-color: #c8ced3 !important;
+    color: #000000 !important;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profileButton:hover{
+    background-color: #a5a5a5 !important;
+}
+
+.profileForm:hover , .profileForm:focus{
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.closeButton {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+}
+
+.closeButton:hover {
+    color: #d73a3a;
+}
